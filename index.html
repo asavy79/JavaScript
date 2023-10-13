@@ -6,35 +6,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="menu">
-        <img src="AlexLogo.png" alt="Image Not Available" width="150px">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Personal Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    
-    </nav>
     <div class="main">
         <div class="text">
-            <h1>Software Engineer</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim repellat culpa veritatis nesciunt aspernatur tenetur! Fugit, harum at ipsum quasi velit veniam aspernatur hic cumque incidunt, quaerat odio eum. Autem ad sequi facere iure harum in veritatis sapiente, quo non nobis tempore voluptatem, ullam recusandae iste fugiat necessitatibus architecto quisquam.</p>
+            <h1>Hi, I'm Alex</h1>
+            <div class="mediaIcons">
+                <a href="https://www.linkedin.com/in/alex-savard-690924229/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/asavy79"><i class="fab fa-github fa-2x"></i></a>
+                <a href="mailto:alex.savard20@icloud.com"><i class="fa fa-at fa-2x"></i></a>
+            </div>
+            <p>My name is Alex Savard, and I am a passionate Software Engineering student at the University of Guelph. When I am not working on side projects, I am either playing hockey, cooking, or listening to music. Additionally, I enjoy learning about new tools and technologies, and trying to use them for a real life application.</p>
             <button>Learn More</button>
         </div>
         <div class="image">
-            <img src="BlackRock.jpeg" alt="Image Not Available" width="350px">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Personal Projects</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
 
     </div>
-    <h1 id="header">Hello World</h1>
-    <input type="text" id="enterFirstName" name="firstName">
-    <input type="text" id="enterLastName" name = "lastName">
-    <button id="returnFirstLast" href=""></button>Click</button>
-    <p id="firstName"></p>
-    <p id="lastName"></p>
+
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1">
+                    <img src="BlackRock.jpeg" alt="Image Not Available">
+                </div>
+                <div class="about-col2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti minima vero totam quo labore expedita, ab pariatur quibusdam distinctio quis, illo nemo consectetur perferendis architecto tempore! Corporis alias nemo laborum atque ipsam adipisci, deleniti enim soluta cupiditate consectetur quisquam perspiciatis tenetur necessitatibus exercitationem in, molestiae dolorem. Velit fugiat nemo praesentium.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Websites</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Software Engineering student at the University of Guelph</li>
+                            <li><span>2018-2022</span><br>Menlo-Atherton High School</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>Ice Hockey Goaltender</span><br>Played hockey at the AAA level throughout middle school and high schoool</li>
+                            <li><span>Chef</span><br>Enjoy Cooking various dishes, especially those with pasta</li>
+                            <li><span>Learning New Skills</span><br>Taking on new tasks involving technology, sports, or other activities</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact">
+        <div class="body">
+            <h1>Reach Out</h1>
+            <input type="text" id="name" placeholder="Name..." >
+            <input type="text" id="email" placeholder="Email...">
+            <input type="text" id="message" placeholder="Message...">
+            <button id="submit">Submit</button>
+
+        </div>
+    </div>
 
     
 

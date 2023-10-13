@@ -1,7 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    background: black;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgb(44, 44, 44), black);
+    background-attachment: fixed;
+    background-position: center;
 }
 
 input {
@@ -17,89 +24,109 @@ input {
     margin: 10px;
 }
 
-.menu {
+
+
+
+
+
+
+.main {
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
     align-items: center;
-    margin: 30px;
-    
+    justify-content: space-between;
+    margin: 20px 100px;
+}
+.main .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 400px;
+    margin: 20px;
 }
 
-
-
-.menu ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    
-}
-
-.menu ul li a {
-    text-decoration: none;
+.main .text h1 {
+    margin-top: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-self: flex-start;
+    margin-bottom: 50px;
     color: rgb(255, 255, 255);
+    font-weight: lighter;
+    font-size: 40px;
+
+}
+
+.mediaIcons {
+    display: flex;
+    align-self: flex-start;
+}
+
+.mediaIcons a {
+    color: rgb(170, 170, 170);
+    margin-right: 50px;
+}
+.mediaIcons a:hover {
+    color: white;
+}
+
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.main .text p {
+    margin-bottom: 30px;
+    color: rgb(170, 170, 170);
+    line-height: 2;
+    margin-top: 50px;
+}
+
+
+.image ul li {
+    display: block;
+    list-style: none;
+    margin: 30px 20px;
+    
+}
+
+.image ul {
+    border-left: 1px solid rgb(170, 170, 170);
+}
+
+.image ul li a {
+    text-decoration: none;
+    color: rgb(170, 170, 170);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: relative;
 }
 
-.menu ul li a::after {
+.image ul li a:hover {
+    color: white;
+}
+
+.image ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: rgb(0, 104, 189);
+    background: rgb(0, 134, 255);
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.3s;
 }
 
-.menu ul li a:hover::after {
+.image ul li a:hover::after {
     width: 100%;
 }
 
-
-
-.main {
-    display: flex;
-    margin-top: 20%px;
-    justify-content: center;
-    margin: 50px;
-}
-.main div {
-    margin: 20px;
-}
-.main .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 20px;
-    width: 400px;
-}
-
-.main .text h1 {
-    margin-top: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    align-self: flex-start;
-    margin-bottom: 50px;
-    color: rgb(0, 140, 255);
-
-}
-
-.main .text p {
-    margin-bottom: 30px;
-    color: rgb(127, 127, 127);
-}
-
-.image img {
-    padding: 20px;
-}
 
 .main .text button {
     align-self: flex-start;
     padding: 10px;
     color: white;
-    background: rgb(0, 110, 201);
+    background: rgb(0, 134, 255);
     border: 1px solid black;
     border-radius: 10px;
     font-size: 15px;
@@ -111,6 +138,87 @@ input {
     background: rgb(0, 104, 189);
     transition: 0.5s;
 }
+
+.about {
+    padding: 80px 0;
+    color: rgb(170, 170, 170);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px 100px;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col1 {
+    flex-basis: 35%;
+}
+
+.about-col1 img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.about-col2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(0, 134, 255);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+
+}
+
+.tab-links.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.tab-contents ul li span {
+    font-size: 14px;
+    color: white;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+
 
 .contact {
     display: flex;
@@ -132,10 +240,11 @@ input {
 .contact .body input {
     width: 300px;
     margin-top: 20px;
-    padding: 5px;
+    padding: 15px;
     border: 1px solid gray;
     border-radius: 5px;
     color: gray;
+    background: none;
 }
 
 .contact .body input:focus {
