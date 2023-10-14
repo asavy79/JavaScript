@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript</title>
+    <title>Alex Savard</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6b0af4bcb3.js" crossorigin="anonymous"></script>
 </head>
@@ -18,20 +18,19 @@
                 <a href="mailto:alex.savard20@icloud.com"><i class="fa fa-at fa-2x"></i></a>
             </div>
             <p>My name is Alex Savard, and I am a passionate Software Engineering student at the University of Guelph. When I am not working on side projects, I am either playing hockey, cooking, or listening to music. Additionally, I enjoy learning about new tools and technologies, and trying to use them for a real life application.</p>
-            <button>Learn More</button>
+            <a id="button" href="#about">Learn More</a>
         </div>
         <div class="image">
             <ul>
-                <li><a href="#">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#">Personal Projects</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
 
     </div>
 
-    <div class="about">
+    <div id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="about-col1">
@@ -43,13 +42,15 @@
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
-                        <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>UI/UX</span><br>Designing Websites</li>
                             <li><span>Web Development</span><br>Web App Development</li>
-                            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                            <li><span>Python</span><br>Building data analysis applications</li>
+                            <li><span>Customer Service</span><br>Customer service associate at Nordstrom</li>
+                            <li><span>Sales</span><br>Sales associate at Allbirds</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
@@ -58,11 +59,11 @@
                             <li><span>2018-2022</span><br>Menlo-Atherton High School</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="hobbies">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Ice Hockey Goaltender</span><br>Played hockey at the AAA level throughout middle school and high schoool</li>
-                            <li><span>Chef</span><br>Enjoy Cooking various dishes, especially those with pasta</li>
-                            <li><span>Learning New Skills</span><br>Taking on new tasks involving technology, sports, or other activities</li>
+                            <li><span>Allbirds Sales Associate (June 2022 - August 2022)</span><br>Assisted customers with product selection, processed transactions, and provided in depth product knowledge to enhance shopping experiences.</li>
+                            <li><span>Nordstrom Customer Service Associate (June 2023 - August 2023)</span><br>Aided customers with issues related to account information and transactions.</li>
+                            <li><span>Mic'd Up Web Development Intern</span><br>Helped with the development and design of the website.</li>
                         </ul>
 
                     </div>
@@ -73,12 +74,12 @@
 
     </div>
 
-    <div class="contact">
+    <div id="contact" class="contact">
         <div class="body">
             <h1>Reach Out</h1>
-            <input type="text" id="name" placeholder="Name..." >
-            <input type="text" id="email" placeholder="Email...">
-            <input type="text" id="message" placeholder="Message...">
+            <input class="entries" type="text" id="name" placeholder="Name..." >
+            <input class="entries" type="text" id="email" placeholder="Email...">
+            <textarea class="entries" name="Entry" id="message2" cols="30" rows="5" placeholder="Message..."></textarea>
             <button id="submit">Submit</button>
 
         </div>
