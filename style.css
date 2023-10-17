@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+}
+
 body {
     background: linear-gradient(rgb(44, 44, 44), black);
     background-attachment: fixed;
@@ -306,6 +311,13 @@ input {
 
 }
 
+#warning {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(255, 86, 86);
+    text-align: center;
+    font-weight: lighter;
+}
+
 
 
 
@@ -319,6 +331,7 @@ input {
         width: 100%;
         margin: 0px;
         margin-top: 50px;
+        align-items: center;
     }
 
     .main .text #button {
@@ -339,6 +352,10 @@ input {
         width: 150px;
     }
 
+    .contact #form .entries {
+        width: 250px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1300px) {
@@ -350,10 +367,16 @@ input {
 
     .main .text {
         margin-right: 0px;
+        align-items: center;
     }
 
     .main .text #button {
         align-self: center;
+    
+    }
+
+    .row {
+        justify-content: center;
     }
 
 }
