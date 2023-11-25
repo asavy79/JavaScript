@@ -35,6 +35,23 @@ const db = getDatabase(app);
 
 var contactFormDB = ref(db, 'contactForm');
 
+
+
+
+
+var userLocationTracker = ref(db, 'userTracker');
+
+async function logUserInformation() {
+    const newSiteViewer = push(userLocationTracker);
+    set(newSiteViewer, {
+        countryInfo: await getCountryInfo(),
+    });
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    logUserInformation();
+});
+
 document.getElementById('form').addEventListener('submit', submitForm);
 
 async function submitForm(e) {
